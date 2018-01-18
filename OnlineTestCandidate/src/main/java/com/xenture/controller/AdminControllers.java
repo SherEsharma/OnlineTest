@@ -56,12 +56,12 @@ public class AdminControllers extends HttpServlet {
 
 			if (rs.next()) {
 				System.out.println("Success");
-				response.sendRedirect("welcome.jsp");
+				response.sendRedirect("dashboard.jsp");
 
 			} else {
 				System.out.println("invalid ");
 				session.setAttribute("message", "Email or password is incorrect.");
-				response.sendRedirect("dashboard.jsp");
+				response.sendRedirect("adminlogin.jsp");
 			}
 
 		} catch (SQLException e) {
