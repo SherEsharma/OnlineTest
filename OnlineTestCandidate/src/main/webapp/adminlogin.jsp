@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Admin Login | Trabaajo</title>
+	<title>Login | Xenture</title>
 	<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png" />
 
 	<meta charset="UTF-8">
@@ -44,9 +44,9 @@
 			<div class="row">
 				<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
 					<div class="card card-signup">
-						<form class="form" method="" action="">
+						<form class="form" method="POST" action="AdminControllers">
 							<div class="header header-primary header-primary-custom text-center">
-								<h4 class="card-title">Admin Login Panel</h4>
+								<h4 class="card-title">Admin Login</h4>
 							</div>
 							
 							<div class="card-content">
@@ -54,17 +54,43 @@
 									<span class="input-group-addon">
 										<i class="material-icons">email</i>
 									</span>
-									<div class="form-group is-empty"><input type="text" class="form-control" placeholder="Email..."><span class="material-input"></span></div>
+									<div class="form-group is-empty">
+										<input type="text" name="adminEmail" class="form-control" placeholder="Email...">
+										<span class="material-input"></span>
+									</div>
 								</div>
 
 								<div class="input-group">
 									<span class="input-group-addon">
 										<i class="material-icons">lock_outline</i>
 									</span>
-									<div class="form-group is-empty"><input type="password" placeholder="Password..." class="form-control"><span class="material-input"></span></div>
+									<div class="form-group is-empty">
+										<input type="password" name="password" placeholder="Password..." class="form-control">
+										<span class="material-input"></span>
+									</div>
 								</div>
+
+   <%  String message = (String) session.getAttribute("message");
+    if (message == null) 
+    {
+       message = null;
+    }
+    %>
+    <%
+    if (message != null)
+    {
+    %>
+    <br>
+    <div class="col-lg-12 col-md-12 col-sm-12 center-block">
+    <div id="change-pwd" style="color: #ac2925; text-align: center;"><%=message%></div>
+    </div>
+    <%
+     }
+      request.getSession().removeAttribute("message");
+    %>
 								<div class="footer text-center">
-									<a href="#" class="btn btn-primary btn-round btn-wd btn-lg margin-tb">Login</a>
+									<button type="submit" class="btn btn-primary btn-round btn-wd btn-lg">		Login
+									</button>
 								</div>
 							</div>
 						</form>
@@ -77,35 +103,10 @@
 		<!-- ./footer start -->
 		<footer class="footer">
 	        <div class="container">
-	            <nav class="">
-					<ul>
-						<li>
-							<a href="#">
-								Home
-							<div class="ripple-container"></div></a>
-						</li>
-						<li>
-							<a href="#">
-							   About Us
-							</a>
-						</li>
-						<li>
-							<a href="#">
-							   Blog
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								PRIVACY POLICY
-							</a>
-						</li>
-					</ul>
-	            </nav>
 	            <div class="copyright">
 	                &copy; 
 	                <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
-	                <script>document.write(new Date().getFullYear())</script>, made
-	                	<i class="fa fa-heart heart"></i> by 
+	                <script>document.write(new Date().getFullYear())</script>, Copyright
 	                	<a href="http://www.xenture.co/" target="_blank">Xenture Inc.</a>
 	            </div>
 	        </div>

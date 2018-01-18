@@ -47,7 +47,7 @@ public class CandidateService {
 	
 	
 	public int saveCandidate(Registration registration){
-		System.out.println("In service method ofr registratio");
+		System.out.println("In service method of registration");
 		
 		
 		Connection conn= null;
@@ -60,7 +60,7 @@ public class CandidateService {
 		System.out.println("Db Connected");
 		
 		
-		String sql="INSERT INTO `xenture_online_test`.`registration` ( `candidate_full_name`, `candidate_email`, `candidate_contact_no`, `college_id`, `candidate_passout_year`, `candidate_fresher_exp`, `candidate_address`, `candidate_password`,  `candidate_ip_address`) VALUES (?,?,?,?,?,?,?,?,?);";
+		String sql="INSERT INTO `registration` ( `candidate_full_name`, `candidate_email`, `candidate_contact_no`, `college_id`, `candidate_passout_year`, `candidate_fresher_exp`, `candidate_address`, `candidate_password`,  `candidate_ip_address`) VALUES (?,?,?,?,?,?,?,?,?);";
 		pstmt=conn.prepareStatement(sql);
 		
 		pstmt.setString(1, registration.getCandidateFullName());
