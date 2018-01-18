@@ -42,6 +42,8 @@ public class AdminControllers extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String adminEmail = request.getParameter("adminEmailId");
 		String password = request.getParameter("adminPassword");
+		//shuhbham
+		
 		try {
 			Connection conn = DConnection.getConnection();
 			HttpSession session = request.getSession();
