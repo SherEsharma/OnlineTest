@@ -53,25 +53,13 @@
 				</div>
 				<div class="col-md-6 col-sm-6 col-xs-12">
 					<div class="card card-signup">
-						<form class="form" method="" action="">
+						<form class="form" method="POST" action="RegistrationController">
 							<div class="header header-primary header-primary-custom text-center">
 								<h4 class="card-title">Let's start to being part of Xenture !</h4>
 							</div>
 							
 							<div class="card-content">
-								<div class="row">
-								    <div class="alert alert-success">
-									  <div class="alert-icon">
-										<i class="material-icons">check</i>
-									  </div>
-									  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-											<span aria-hidden="true">
-												<i class="material-icons">clear</i>
-											</span>
-									  </button>
-								      <p>Successfully Registered !!</p>
-								    </div>
-								</div>
+								
 								<div class="row">
 									<div class="col-md-6 col-sm-6 col-xs-12">		
 										<div class="input-group">
@@ -79,7 +67,7 @@
 												<i class="material-icons">person</i>
 											</span>
 											<div class="form-group is-empty">
-												<input type="text" class="form-control" placeholder="Enter Your Full Name" required="required">
+												<input type="text"name="candidateName" class="form-control" placeholder="Enter Your Full Name"  required="required">
 												<span class="material-input"></span>
 											</div>
 										</div>
@@ -90,7 +78,7 @@
 												<i class="material-icons">phone</i>
 											</span>
 											<div class="form-group is-empty">
-												<input type="tel" class="form-control" placeholder="Enter Contact Number" pattern="[789][0-9]{9}" required="required">
+												<input type="tel" name="candidatePhone" class="form-control" placeholder="Enter Contact Number" pattern="[789][0-9]{9}" required="required">
 												<span class="material-input"></span>
 											</div>
 										</div>
@@ -104,7 +92,7 @@
 										<i class="material-icons">email</i>
 									</span>
 									<div class="form-group is-empty">
-										<input type="email" class="form-control" placeholder="Enter Your Email Id" required="required">
+										<input type="email" name="candidateEmail" class="form-control" placeholder="Enter Your Email Id" required="required">
 										<span class="material-input"></span>
 									</div>
 										</div>
@@ -116,7 +104,7 @@
 												<i class="material-icons">date_range</i>
 											</span>
 											<div class="form-group is-empty">
-												<input type="text" placeholder="Enter Passout Year" class="form-control" required="required"><span class="material-input"></span>
+												<input type="text" name="candidatePassYear" placeholder="Enter Passout Year" class="form-control" required="required"><span class="material-input"></span>
 											</div>
 										</div>
 									</div>
@@ -129,7 +117,7 @@
 												<i class="material-icons">school</i>
 											</span>
 											<div class="form-group is-empty">
-												<input type="text" placeholder="Fresher Or Experience" class="form-control" required="required"><span class="material-input"></span>
+												<input type="text" name="candidatestatus" placeholder="Fresher Or Experience" class="form-control" required="required"><span class="material-input"></span>
 											</div>
 										</div>
 									</div>
@@ -139,7 +127,7 @@
 												<i class="material-icons">lock_outline</i>
 											</span>
 											<div class="form-group is-empty">
-												<input type="password" placeholder="Password" class="form-control"><span class="material-input"></span>
+												<input type="password" name="candidatePassword" placeholder="Password" class="form-control"><span class="material-input"></span>
 											</div>
 										</div>
 									</div>
@@ -150,7 +138,7 @@
 										<i class="material-icons">business</i>
 									</span>
 									<div class="form-group is-empty">
-										<input type="text" placeholder="Enter University / College Name" class="form-control" required="required"><span class="material-input"></span>
+										<input type="text" name="candidateCollegeName" placeholder="Enter University / College Name" class="form-control" required="required"><span class="material-input"></span>
 									</div>
 								</div>
 
@@ -159,10 +147,27 @@
 										<i class="material-icons">home</i>
 									</span>
 									<div class="form-group is-empty">
-										<input type="text" placeholder="Enter Your Address" class="form-control"><span class="material-input"></span>
+										<input type="text" name="candidateAddress" placeholder="Enter Your Address" class="form-control"><span class="material-input"></span>
 									</div>
 								</div>
-
+   <%  String message = (String) session.getAttribute("message");
+    if (message == null) 
+    {
+       message = null;
+    }
+    %>
+   <%
+    if (message != null)
+    {
+    %>
+    <br>
+    <div class="col-lg-12 col-md-12 col-sm-12 center-block">
+    <div id="change-pwd" style="color: #ac2925; text-align: center;"><%=message%></div>
+    </div>
+    <%
+     }
+      request.getSession().removeAttribute("message");
+    %>
 								<div class="footer text-center">
 									<button type="submit" class="btn btn-primary btn-round btn-wd btn-lg">		Register
 									</button>

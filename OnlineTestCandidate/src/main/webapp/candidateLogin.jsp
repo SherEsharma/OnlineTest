@@ -44,18 +44,30 @@
 			<div class="row">
 				<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
 					<div class="card card-signup">
-						<form class="form" method="" action="">
+						<form class="form" method="POST" action="CandidateLoginController">
 							<div class="header header-primary header-primary-custom text-center">
 								<h4 class="card-title">Let's start to being part of Xenture !</h4>
 							</div>
-							
+							<div class="row">
+								    <div class="alert alert-success">
+									  <div class="alert-icon">
+										<i class="material-icons">check</i>
+									  </div>
+									  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+											<span aria-hidden="true">
+												<i class="material-icons">clear</i>
+											</span>
+									  </button>
+								      <p>Successfully Registered !!</p>
+								    </div>
+								</div>
 							<div class="card-content">
 								<div class="input-group">
 									<span class="input-group-addon">
 										<i class="material-icons">email</i>
 									</span>
 									<div class="form-group is-empty">
-										<input type="text" class="form-control" placeholder="Email...">
+										<input type="text" name="candidateEmail" class="form-control" placeholder="Email...">
 										<span class="material-input"></span>
 									</div>
 								</div>
@@ -65,19 +77,34 @@
 										<i class="material-icons">lock_outline</i>
 									</span>
 									<div class="form-group is-empty">
-										<input type="password" placeholder="Password..." class="form-control">
+										<input type="password" name="candidatePassword" placeholder="Password..." class="form-control">
 										<span class="material-input"></span>
 									</div>
 								</div>
+
+   <%  String message = (String) session.getAttribute("message");
+    if (message == null) 
+    {
+       message = null;
+    }
+    %>
+    <%
+    if (message != null)
+    {
+    %>
+    <br>
+    <div class="col-lg-12 col-md-12 col-sm-12 center-block">
+    <div id="change-pwd" style="color: #ac2925; text-align: center;"><%=message%></div>
+    </div>
+    <%
+     }
+      request.getSession().removeAttribute("message");
+    %>
 								<div class="footer text-center">
 									<button type="submit" class="btn btn-primary btn-round btn-wd btn-lg">		Login
 									</button>
 								</div>
 							</div>
-
-							<div class="card-action text-center gray">
-				              	<a href="register.html" class="red">Resigster Here</a>
-				            </div>
 						</form>
 					</div>
 				</div>
