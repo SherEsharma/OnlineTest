@@ -1,0 +1,158 @@
+/*========= Genric index start =========
+
+1. reset
+2. font-family
+3. svg-family
+4. text-color
+5. background-color
+6. display
+7. margin & padding
+
+========= Genric index end =========*/
+
+
+
+
+/*========= reset start =========*/
+
+body {
+    font-size: 14px;
+    margin: 0px;
+    font-family: 'roboto_slabregular' !important;
+}
+
+h1,h2,h3,h4,h5,h6,ul,ol,li,p {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+a,a:hover,a:focus {
+    background: none;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+
+/*========= reset end =========*/
+
+/*========= font-family start =========*/
+
+@font-face {
+    font-family: 'roboto_slabbold';
+    src: url('../fonts/robotoslab-bold-webfont.woff2') format('woff2'),
+         url('../fonts/robotoslab-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'roboto_slablight';
+    src: url('../fonts/robotoslab-light-webfont.woff2') format('woff2'),
+         url('../fonts/robotoslab-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'roboto_slabregular';
+    src: url('../fonts/robotoslab-regular-webfont.woff2') format('woff2'),
+         url('../fonts/robotoslab-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'roboto_slabthin';
+    src: url('../fonts/robotoslab-thin-webfont.woff2') format('woff2'),
+         url('../fonts/robotoslab-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/*========= font-family end =========*/
+
+/*========= svg-family start =========*/
+
+
+
+
+/*========= svg-family end =========*/
+
+/*========= text-color start =========*/
+
+.gray, a.gray {
+    color: #aaa;
+}
+
+.red, a.red  {
+    color: #e33029;
+}
+
+
+/*========= text-color end =========*/
+
+/*========= background-color & img start =========*/
+
+.body-bg {
+    background: url(../img/login-bg.png);
+    background-size: cover;
+    background-position: top center;
+    height: 768px;
+    position: relative;
+}
+
+.header-filter::before {
+    background-color: rgba(218, 216, 216, 0.66) !important;
+}
+.body-bg:before, .body-bg:after {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: block;
+    left: 0;
+    top: 0;
+    content: "";
+}
+
+
+/*========= background-color & img end =========*/
+
+/*========= display start =========*/
+
+.dib {
+    display: inline-block;
+}
+
+
+
+/*========= display end =========*/
+
+/*========= margin & padding start =========*/
+
+.margin-tb {
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+}
+
+.mrg5 {
+    margin: 5% 0 0 0 !important;
+}
+
+.no-pad {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+
+/*========= margin & padding end =========*/
+
+

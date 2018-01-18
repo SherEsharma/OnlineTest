@@ -1,0 +1,238 @@
+/*========= Genric index start =========
+
+1. 
+
+========= Genric index end =========*/
+
+h4.card-title {
+    font-family: 'roboto_slablight';
+    font-weight: 100;
+}
+
+.card .header-primary-custom {
+    background: linear-gradient(60deg, #e32b24, #79130f);
+}
+
+.form-group.is-focused .form-control {
+    outline: none;
+    background-image: linear-gradient(#d32821, #881712), linear-gradient(#D2D2D2, #D2D2D2);
+    background-size: 100% 2px, 100% 1px;
+    box-shadow: none;
+    transition-duration: 0.3s;
+}
+
+.checkbox input[type=checkbox]:checked + .checkbox-material .check {
+    background: #d02620;
+}
+
+.btn.btn-primary.btn-simple {
+    color: #e4322b;
+}
+
+.btn.btn-primary.btn-simple:hover, .btn.btn-primary.btn-simple:focus {
+    background-color: transparent;
+    color: #e32c25;
+}
+
+.card.card-signup {
+    margin-bottom: 0;
+}
+
+.btn.btn-lg {
+    font-size: 14px;
+    padding: 10px 36px;
+    background-color: #d22720;
+}
+
+.btn.btn-primary, .btn.btn-primary:active, .btn.btn-primary:hover, .btn.btn-primary:focus {  
+    background-color: #9e1c16;
+    color: #FFFFFF;
+}
+
+.btn.btn-primary, .btn.btn-primary:focus, .btn.btn-primary:active, .btn.btn-primary:active:focus {
+    background-color: #9e1c16;
+    color: #FFFFFF;
+}
+
+.card .card-action {
+    position: relative;
+    background-color: inherit;
+    border-top: 1px solid rgba(160,160,160,0.2);
+    padding: 16px 24px;
+}
+
+.card-signup .checkbox {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+footer ul li a {
+    padding: 5px 15px;
+}
+
+.question-box, .option-box {
+    font-size: 20px;
+    padding: 20px;
+}
+
+.exam-box .radio input[type=radio]:checked ~ .circle {
+    border-color: #cf2620;
+}
+
+.exam-box .radio input[type=radio]:checked ~ .check {
+    background-color: #ca261f;
+}
+
+.exam-box ul {
+    padding: 20px;
+}
+
+.exam-box ul li {
+    list-style: none;
+}
+
+.exam-box ul li label {
+    color: #333 !important;
+    font: 18px !important;
+}
+
+.timer-div {
+    font-size: 18px;
+}
+
+.question{
+  display:none
+}
+
+.active{
+  display:block
+}
+
+.about-blk h1, .about-blk p, .about-blk h3,  .about-blk h2 {
+    font-family: 'roboto_slabregular';
+    color: #000;
+}
+
+.about-blk h1 {
+    font-size: 3.3em;
+    line-height: 180%;
+}
+
+.about-blk p {
+    font-size: 1.2em;
+    line-height: 180%;
+    margin: 20px 0 !important;
+}
+
+.instruction-blk {
+    padding: 20px 50px;
+}
+
+.instruction-blk ul li {
+    list-style: disc;
+    margin: 15px 0 !important;
+    font-size: 1.2em;
+}
+
+.result-table {
+    padding: 5% 0;
+}
+
+.result-table table {
+    margin: 0 auto;
+    color: #000;
+    font-size: 1.5em;
+}
+
+.result-table table td {
+   padding: 10px 20px;
+}
+
+.card-signup .card-content {
+    padding: 0px 30px 0px 30px;
+}
+
+.input-group .input-group-addon {
+    padding: 6px 5px 0px;
+}
+
+.dashboard-page .red-bg {
+    background: #e31d1ac4;
+    position:fixed !important;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+}
+
+.dashboard-page .grey-bg {
+    background: #302b27b5;
+    position:fixed !important;
+    position:absolute;
+    top:0;
+    bottom:0;
+    right:0;
+}
+
+.dash-wrapper {
+    padding: 0 15px;
+}
+
+h2.dash-title {
+    color: #fff;
+    font-size: 1.8em;
+    text-transform: capitalize;
+    font-family: 'roboto_slabregular';
+    padding: 15px !important;
+}
+
+h2.dash-title button, 
+h2.dash-title button:hover,
+h2.dash-title button:focus, 
+h2.dash-title button:active  {
+    background: transparent;
+    box-shadow: none;
+    font-size: 0.9em;
+    padding: 0;
+    margin: 0;
+    text-transform: capitalize;
+    font-family: 'roboto_slabregular';
+    border: 0;
+}
+
+.img-box i {
+    font-size: 10em;
+}
+
+.dash-content.text-center {
+    color: #fff;
+    padding: 15px;
+    margin-top: 10%;
+    margin-bottom: 20%;
+}
+
+.grey-bg .dash-content {
+    margin-top: 15.8%;
+    margin-bottom: 20%;
+}
+
+.dash-content h2 {
+    font-family: 'roboto_slabregular';
+    margin: 15% 0 !important;
+}
+
+.dash-content button.btn.btn-white.btn-round {
+    color: #000000;
+}
+
+.dashboard-page .container-fluid {
+    background: url('../../assets/img/dash-bg.png');
+    width: 100%;
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+

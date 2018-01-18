@@ -1,0 +1,107 @@
+@media screen and (max-width: 1366px) {
+    .about-blk h1 {
+        font-size: 3.3em;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .about-blk h1 {
+        font-size: 2.8em;
+    }
+
+    .dash-content h2 {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .about-blk h1 {
+        font-size: 2.4em;
+    }
+
+    .grey-bg .dash-content {
+        margin-top: 17.8%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-blk h1 {
+        font-size: 2em;
+    }
+
+    .grey-bg .dash-content {
+        margin-top: 19.8%;
+    }
+
+    .dash-content h2 {
+        font-size: 1.4em;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 481px) {
+    .about-blk h1 {
+        font-size: 2em;
+    }
+
+    .table-responsive {
+        border: 0;
+    }
+
+    .dashboard-page .red-bg, .dashboard-page .grey-bg {
+        position: relative !important; 
+        position: absolute; 
+        top: 0; 
+        bottom: 0; 
+        left: 0; 
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    body {
+        font-size: 120%;
+    }
+
+    .about-blk h1 {
+        font-size: 1.5em;
+        line-height: 100%;
+    }
+
+    .page-header .card {
+        top: 50px;
+    }
+
+    .page-header .card-title {
+        font-size: 1.2em;
+    }
+
+    footer {
+        padding: 12% 0 0 0;
+    }
+
+    .table-responsive {
+        border: 0;
+    }
+
+    .img-box i {
+        font-size: 7em;
+    }
+
+    .dash-content h2 {
+        font-size: 1.6em;
+        margin: 5% 0 !important;
+    }
+
+    .dash-content.text-center {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .dashboard-page .red-bg, .dashboard-page .grey-bg {
+        position: relative !important; 
+        position: absolute; 
+        top: 0; 
+        bottom: 0; 
+        left: 0; 
+    }
+}
