@@ -175,7 +175,7 @@
 							</div>
 
 							<div class="card-action text-center gray">
-				              	<a href="login.html" class="red">Login Here</a>
+				              	<a href="candidateLogin.jsp" class="red">Login Here</a>
 				            </div>
 						</form>
 					</div>

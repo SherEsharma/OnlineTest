@@ -54,7 +54,9 @@
 						<!-- =============== card-header End ================= -->
 						<!-- =============== card-content start ================= -->	
 						<div class="card-content exam-box">
-							<!-- =============== Instruction Start ================= -->
+						<% String candidateName	=request.getParameter("candidateName");%>
+						Welcome <%= candidateName	 %>
+						<!-- =============== Instruction Start ================= -->
 							<div class="instruction-blk">
 								<ul>
 									<li>This is a 10 minute test comprising of 10 questions.</li>
@@ -67,9 +69,9 @@
 							<!-- =============== Instruction End =================== -->
 							<!-- =============== Start Test Start ================= -->
 							<div class="footer text-center">
-								<button type="submit" class="btn btn-primary btn-round btn-wd btn-lg next">	
+								<a href="exam.jsp" class="btn btn-primary btn-round btn-wd btn-lg next">	
 									Start Test
-								</button>
+								</a>
 							</div>
 							<!-- =============== Start Test End ================= -->
 						</div>

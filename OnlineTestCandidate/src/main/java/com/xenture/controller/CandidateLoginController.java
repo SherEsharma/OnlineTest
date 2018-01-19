@@ -46,6 +46,7 @@ public class CandidateLoginController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String candidateEmail=request.getParameter("candidateEmail");
 		String candidatePassword=request.getParameter("candidatePassword");
+		
 			System.out.println(candidateEmail+" "+candidatePassword);
 		
 			try {	
@@ -54,6 +55,7 @@ public class CandidateLoginController extends HttpServlet {
 				PreparedStatement pstmt = conn.prepareStatement("select candidate_email,candidate_password from registration where candidate_email=? and candidate_password=?");
 		        pstmt.setString(1, candidateEmail);
 		        pstmt.setString(2, candidatePassword);
+		       
  
 		        ResultSet rs = pstmt.executeQuery();
 		       System.out.println(rs);
@@ -74,6 +76,10 @@ public class CandidateLoginController extends HttpServlet {
 			   // TODO Auto-generated catch block
 				 e.printStackTrace();
 			    }	
+			
+			
+			
+			
 	}
 
 }
