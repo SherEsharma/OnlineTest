@@ -13,7 +13,8 @@ public class DConnection {
   	 
   	//DEV TEST FORM CLOUD9
 	private static final String Driver="com.mysql.jdbc.Driver";
-	private static final String uri="jdbc:mysql://onlinetestdev.ct6mkaej3dnq.ap-south-1.rds.amazonaws.com:3306/onlineTest";
+	//private static final String uri="jdbc:mysql://onlinetestdev.ct6mkaej3dnq.ap-south-1.rds.amazonaws.com:3306/onlineTest";
+	private static final String uri="jdbc:mysql://xenturedbserver.ct6mkaej3dnq.ap-south-1.rds.amazonaws.com:3306/trabaajodb";
     private static final String username="xenture";
     private static final String pass="trabaajo123";
   	 

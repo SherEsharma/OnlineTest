@@ -27,7 +27,7 @@ function startTimer() {
   }
   if(m<0) {
   	alert('timer completed');
-  	window.location.href = "thank-you.html";
+  	window.location.href = "thank-you.jsp";
   }
   
   document.getElementById('timer').innerHTML =

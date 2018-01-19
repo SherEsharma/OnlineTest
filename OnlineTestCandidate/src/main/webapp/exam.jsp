@@ -1,3 +1,25 @@
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<%
+    String id = request.getParameter("ques_id");
+	String driverName = "com.mysql.jdbc.Driver";
+	String connectionUrl = "jdbc:mysql://localhost:3306/";
+	String dbName = "xenture_online_test";
+	String userId = "root";
+	String password = "";
+	
+	try {
+		Class.forName(driverName);
+	} catch (ClassNotFoundException e) {
+		e.printStackTrace();
+	}
+	
+	Connection connection = null;
+	Statement statement = null;
+	ResultSet resultSet = null;
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,15 +75,24 @@
 							<div class="timer-div">Time left = <span id="timer"></span></div>
 						</div>
 						<!-- =============== card-header End ================= -->
+<%
+	try{	
+		connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
+		statement=connection.createStatement();
+		String sql ="SELECT * FROM question";
+
+		resultSet = statement.executeQuery(sql);
+		while(resultSet.next()){
+%>						
 						<!-- =============== card-content start ================= -->	
 						<div class="card-content exam-box">
 							<!-- =============== Question wrapper start ================= -->
 							<div id="q0" class="question active">
 								<!-- =============== Question box start ================= -->
 								<div class="question-box">
-									<span class="sr-no">1.</span>
+									<span class="sr-no"><%=resultSet.getString("ques_id") %></span>
 									<p class="q-txt dib">
-										The language spoken by the people by Pakistan is ?
+										<%=resultSet.getString("ques_question") %>
 									</p>
 								</div>
 								<!-- ================ Question box end ================== -->
@@ -73,7 +104,7 @@
 											<div class="radio">
 												<label>
 													<input type="radio" name="optionsRadios">
-													Hindi
+													<%=resultSet.getString("quest_ans_opt1") %>
 												</label>
 											</div>
 										</li>
@@ -83,7 +114,7 @@
 											<div class="radio">
 												<label>
 													<input type="radio" name="optionsRadios">
-													Palauan
+													<%=resultSet.getString("quest_ans_opt2") %>
 												</label>
 											</div>
 										</li>
@@ -93,7 +124,7 @@
 											<div class="radio">
 												<label>
 													<input type="radio" name="optionsRadios">
-													Sindhi
+													<%=resultSet.getString("quest_ans_opt3") %>
 												</label>
 											</div>
 										</li>
@@ -103,7 +134,7 @@
 											<div class="radio">
 												<label>
 													<input type="radio" name="optionsRadios">
-													Nauruan
+													<%=resultSet.getString("quest_ans_opt4") %>
 												</label>
 											</div>
 										</li>
@@ -112,6 +143,7 @@
 								</div>
 								<!-- =============== Option box end ================= -->
 							</div>
+
 							<!-- =============== Question wrapper End ================= -->
 							<!-- =============== Question wrapper start ================= -->
 							<div id="q1" class="question">
@@ -119,7 +151,7 @@
 								<div class="question-box">
 									<span class="sr-no">2.</span>
 									<p class="q-txt dib">
-										The language spoken by the people by Pakistan is ?
+									   The language spoken by the people by Pakistan is ?
 									</p>
 								</div>
 								<!-- ================ Question box end ================== -->
@@ -301,6 +333,13 @@
 				</div>
 				<!-- =============== col-md-12 End ================= -->
 			</div>
+<%		
+		}
+		
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+%>
 			<!-- =============== row End ================= -->
 		</section>
 		<!-- =============== section end ================= -->
